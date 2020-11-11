@@ -29,7 +29,7 @@ def map():
     photo_ref = city.content['candidates'][0]['photos'][0]['photo_reference']
     city.photo = f'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={photo_ref}&key={GOOGLE_MAPS_API}'
 
-    return render_template('map.html', city=city)
+    return render_template('map.html', city=city, API_KEY=GOOGLE_MAPS_API)
 
 if __name__ == "__main__":
     app.run()
